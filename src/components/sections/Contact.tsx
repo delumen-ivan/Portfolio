@@ -61,8 +61,7 @@ const Contact = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-primary-600 font-semibold text-sm uppercase tracking-wider">Let's Connect</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mt-3 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
             Get In Touch
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto rounded-full"></div>

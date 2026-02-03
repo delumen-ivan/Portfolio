@@ -12,12 +12,6 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="animate-slide-up">
-            <div className="inline-block mb-6">
-              <span className="px-4 py-2 bg-primary-100/80 backdrop-blur-sm text-primary-700 rounded-full text-sm font-medium shadow-sm">
-                Welcome to my portfolio
-              </span>
-            </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-neutral-900 mb-6 leading-tight">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 bg-clip-text text-transparent">
@@ -34,8 +28,7 @@ const Hero = () => {
                 href="#projects"
                 className="group px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-medium shadow-lg shadow-primary-200 hover:shadow-xl hover:shadow-primary-300 hover:-translate-y-0.5 transition-all duration-300"
               >
-                View My Work
-                <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                View My Projects
               </a>
               <a
                 href="#contact"
