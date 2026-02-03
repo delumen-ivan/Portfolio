@@ -22,11 +22,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary-300 rounded-full;
+  @apply bg-neutral-400 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary-400;
+  @apply bg-neutral-500;
 }
 
 /* Smooth transitions for all interactive elements */

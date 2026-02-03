@@ -45,15 +45,15 @@ const Projects = () => {
   return (
     <section id="projects" className="py-24 bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-accent-100/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-primary-100/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-neutral-100/40 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-neutral-200/30 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4 font-display">
             Featured Projects
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-neutral-900 mx-auto rounded-full"></div>
           <p className="text-neutral-600 mt-6 max-w-2xl mx-auto">
             Here are some of my recent works that showcase my skills and passion for development
           </p>
@@ -76,7 +76,7 @@ const Projects = () => {
                 <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${!isEven ? 'lg:grid-flow-dense' : ''}`}>
                   {/* Image Section */}
                   <div className={`relative ${!isEven ? 'lg:col-start-2' : ''}`}>
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary-200/50 group-hover:shadow-3xl group-hover:shadow-primary-300/50 transition-all duration-500">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-neutral-200 group-hover:shadow-3xl group-hover:shadow-neutral-300 transition-all duration-500">
                       {/* Main Image */}
                       <img
                         src={project.imageUrl}
@@ -85,7 +85,7 @@ const Projects = () => {
                       />
                       
                       {/* Tech Stack Overlay - Shows on Hover */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 via-primary-800/95 to-accent-900/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-sm">
+                      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/95 via-neutral-800/95 to-neutral-900/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-sm">
                         <div className="text-center px-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                           <div className="mb-6">
                             <svg className="w-12 h-12 mx-auto text-white/90 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,30 +112,30 @@ const Projects = () => {
                       </div>
                       
                       {/* Decorative Corner */}
-                      <div className={`absolute top-0 ${isEven ? 'right-0' : 'left-0'} w-20 h-20 bg-gradient-to-br from-accent-500 to-primary-600 opacity-80`}></div>
+                      <div className={`absolute top-0 ${isEven ? 'right-0' : 'left-0'} w-20 h-20 bg-neutral-800 opacity-80`}></div>
                       <div className={`absolute top-0 ${isEven ? 'right-0' : 'left-0'} w-20 h-20 bg-white/10 backdrop-blur-sm flex items-center justify-center`}>
                         <span className="text-white font-bold text-2xl">0{project.id}</span>
                       </div>
                     </div>
                     
                     {/* Floating decoration */}
-                    <div className={`absolute -z-10 top-8 ${isEven ? '-right-8' : '-left-8'} w-full h-full bg-gradient-to-br from-primary-200/40 to-accent-200/40 rounded-2xl group-hover:scale-105 transition-transform duration-500`}></div>
+                    <div className={`absolute -z-10 top-8 ${isEven ? '-right-8' : '-left-8'} w-full h-full bg-gradient-to-br from-neutral-200/40 to-neutral-300/40 rounded-2xl group-hover:scale-105 transition-transform duration-500`}></div>
                   </div>
                   
                   {/* Content Section */}
                   <div className={`space-y-6 ${!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                     <div>
                       <div className="inline-block mb-3">
-                        <span className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <span className="px-3 py-1 bg-neutral-100 text-neutral-700 rounded-full text-xs font-semibold uppercase tracking-wider">
                           Featured Project
                         </span>
                       </div>
-                      <h3 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4 group-hover:text-primary-600 transition-colors">
+                      <h3 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4 group-hover:text-neutral-700 transition-colors">
                         {project.title}
                       </h3>
                     </div>
                     
-                    <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-neutral-200/50 group-hover:shadow-xl group-hover:border-primary-200 transition-all duration-300">
+                    <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-neutral-200/50 group-hover:shadow-xl group-hover:border-neutral-300 transition-all duration-300">
                       <p className="text-neutral-700 leading-relaxed text-base">
                         {project.description}
                       </p>
@@ -147,7 +147,7 @@ const Projects = () => {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group/btn flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-semibold shadow-lg shadow-primary-200 hover:shadow-xl hover:shadow-primary-300 hover:-translate-y-1 transition-all duration-300"
+                          className="group/btn flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white rounded-xl font-semibold shadow-lg shadow-neutral-200 hover:shadow-xl hover:shadow-neutral-300 hover:-translate-y-1 transition-all duration-300"
                         >
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />

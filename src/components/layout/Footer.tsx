@@ -48,7 +48,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-8">
           {/* Brand Section */}
           <div>
-            <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent inline-block mb-4">
+            <a 
+              href="#home" 
+              className="text-2xl font-bold bg-gradient-to-r from-neutral-400 to-neutral-500 bg-clip-text text-transparent inline-block mb-4">
               Portfolio
             </a>
             <p className="text-neutral-400 leading-relaxed">
@@ -64,9 +66,9 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-neutral-400 hover:text-primary-400 transition-colors inline-flex items-center gap-2 group"
+                    className="text-neutral-400 hover:text-neutral-200 transition-colors inline-flex items-center gap-2 group"
                   >
-                    <span className="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all duration-300"></span>
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-neutral-400 transition-all duration-300"></span>
                     {link.name}
                   </a>
                 </li>
@@ -84,7 +86,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-neutral-800 hover:bg-primary-600 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-500/20"
+                  className="p-3 bg-neutral-800 hover:bg-neutral-700 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-neutral-700/20"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -101,9 +103,9 @@ const Footer = () => {
               © {currentYear} Portfolio. Crafted with ❤️ and ☕
             </p>
             <div className="flex items-center gap-6 text-sm text-neutral-400">
-              <a href="#" className="hover:text-primary-400 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-neutral-200 transition-colors">Privacy Policy</a>
               <span>•</span>
-              <a href="#" className="hover:text-primary-400 transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-neutral-200 transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>

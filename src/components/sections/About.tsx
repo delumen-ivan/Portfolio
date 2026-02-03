@@ -13,20 +13,20 @@ const About = () => {
   return (
     <section id="about" className="py-24 bg-white relative overflow-hidden">
       {/* Subtle background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-100/30 rounded-full blur-3xl -z-0"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-neutral-100/50 rounded-full blur-3xl -z-0"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4 font-display">
             About Me
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-neutral-900 mx-auto rounded-full"></div>
         </div>
         
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-primary-50 to-accent-50 p-8 rounded-2xl border border-primary-100/50 shadow-sm">
+              <div className="bg-gradient-to-br from-neutral-50 to-neutral-100 p-8 rounded-2xl border border-neutral-200 shadow-sm">
                 <p className="text-neutral-700 leading-relaxed text-lg">
                   I'm a passionate web developer with expertise in building modern,
                   responsive web applications. I love turning complex problems into
@@ -44,7 +44,7 @@ const About = () => {
                 {skills.map((skill, index) => (
                   <div
                     key={skill.name}
-                    className="group px-5 py-4 bg-gradient-to-br from-white to-primary-50/50 border border-primary-100 hover:border-primary-300 rounded-xl text-center font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default"
+                    className="group px-5 py-4 bg-gradient-to-br from-white to-neutral-50 border border-neutral-200 hover:border-neutral-400 rounded-xl text-center font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">{skill.icon}</div>

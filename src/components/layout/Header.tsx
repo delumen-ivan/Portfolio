@@ -17,7 +17,7 @@ const Header = () => {
       const scrollPosition = window.scrollY + 150
 
       for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i]
+        const section = sections[i] as HTMLElement | null
         if (section && section.offsetTop <= scrollPosition) {
           setActiveSection(navLinks[i].id)
           break

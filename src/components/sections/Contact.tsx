@@ -55,16 +55,16 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white to-primary-50 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-gradient-to-b from-white to-neutral-50 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-accent-200/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 right-0 w-96 h-96 bg-neutral-200/30 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4 font-display">
             Get In Touch
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-neutral-900 mx-auto rounded-full"></div>
           <p className="text-neutral-600 mt-6 max-w-2xl mx-auto">
             Have a project in mind or just want to chat? Feel free to reach out!
           </p>
@@ -88,9 +88,9 @@ const Contact = () => {
                   href={info.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-white rounded-xl border border-neutral-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 group"
+                  className="flex items-center gap-4 p-4 bg-white rounded-xl border border-neutral-200 hover:border-neutral-400 hover:shadow-md transition-all duration-300 group"
                 >
-                  <div className="p-3 bg-primary-50 text-primary-600 rounded-lg group-hover:bg-primary-100 transition-colors">
+                  <div className="p-3 bg-neutral-100 text-neutral-700 rounded-lg group-hover:bg-neutral-200 transition-colors">
                     {info.icon}
                   </div>
                   <div>
@@ -120,7 +120,7 @@ const Contact = () => {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   required
-                  className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all placeholder:text-neutral-400"
+                  className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl focus:ring-2 focus:ring-neutral-500 focus:border-transparent outline-none transition-all placeholder:text-neutral-400"
                   placeholder="John Doe"
                 />
               </div>
@@ -140,7 +140,7 @@ const Contact = () => {
                     setFormData({ ...formData, email: e.target.value })
                   }
                   required
-                  className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all placeholder:text-neutral-400"
+                  className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl focus:ring-2 focus:ring-neutral-500 focus:border-transparent outline-none transition-all placeholder:text-neutral-400"
                   placeholder="john@example.com"
                 />
               </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                     setFormData({ ...formData, message: e.target.value })
                   }
                   required
-                  className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none placeholder:text-neutral-400"
+                  className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl focus:ring-2 focus:ring-neutral-500 focus:border-transparent outline-none transition-all resize-none placeholder:text-neutral-400"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -168,7 +168,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-semibold shadow-lg shadow-primary-200 hover:shadow-xl hover:shadow-primary-300 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                className="w-full px-8 py-4 bg-neutral-900 text-white rounded-xl font-semibold shadow-lg shadow-neutral-200 hover:shadow-xl hover:shadow-neutral-300 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center gap-2">
