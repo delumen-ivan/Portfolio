@@ -12,10 +12,10 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="animate-slide-up">
-            <h1 className="text-5xl md:text-7xl font-bold text-neutral-900 mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-neutral-900 mb-6 leading-tight font-display">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 bg-clip-text text-transparent">
-                Your Name
+                Ivan Delumen
               </span>
             </h1>
             
@@ -25,27 +25,16 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="#projects"
-                className="group px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-medium shadow-lg shadow-primary-200 hover:shadow-xl hover:shadow-primary-300 hover:-translate-y-0.5 transition-all duration-300"
+                href="/path-to-your-cv.pdf"
+                download
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-semibold shadow-lg shadow-primary-200 hover:shadow-xl hover:shadow-primary-300 hover:-translate-y-1 transition-all duration-300"
               >
-                View My Projects
-              </a>
-              <a
-                href="#contact"
-                className="px-8 py-4 bg-white text-primary-700 rounded-xl font-medium border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
-              >
-                Get In Touch
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Download CV</span>
               </a>
             </div>
-          </div>
-          
-          {/* Scroll indicator */}
-          <div className="mt-20 animate-bounce">
-            <a href="#about" className="inline-block text-neutral-400 hover:text-primary-600 transition-colors">
-              <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </a>
           </div>
         </div>
       </div>
