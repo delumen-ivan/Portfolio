@@ -69,9 +69,6 @@ const Projects = () => {
             Projects
           </h2>
           <div className="w-20 h-1 bg-neutral-900 mx-auto rounded-full"></div>
-          <p className="text-neutral-600 mt-6 max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and passion for development
-          </p>
         </div>
         
         <div className="max-w-7xl mx-auto space-y-32">
@@ -81,7 +78,7 @@ const Projects = () => {
             return (
               <div
                 key={project.id}
-                className="group relative"
+                className="relative"
                 style={{ 
                   animation: 'fadeIn 0.8s ease-out',
                   animationDelay: `${index * 0.2}s`,
@@ -90,7 +87,7 @@ const Projects = () => {
               >
                 <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${!isEven ? 'lg:grid-flow-dense' : ''}`}>
                   {/* Image Section */}
-                  <div className={`relative ${!isEven ? 'lg:col-start-2' : ''}`}>
+                  <div className={`relative group ${!isEven ? 'lg:col-start-2' : ''}`}>
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-neutral-200 group-hover:shadow-3xl group-hover:shadow-neutral-300 transition-all duration-500">
                       {/* Main Image */}
                       <img
@@ -128,18 +125,18 @@ const Projects = () => {
                     </div>
                     
                     {/* Floating decoration */}
-                    <div className={`absolute -z-10 top-8 ${isEven ? '-right-8' : '-left-8'} w-full h-full bg-gradient-to-br from-neutral-200/40 to-neutral-300/40 rounded-2xl group-hover:scale-105 transition-transform duration-500`}></div>
+                    <div className={`absolute -z-10 top-8 ${isEven ? '-right-8' : '-left-8'} w-full h-full bg-gradient-to-br from-neutral-200/40 to-neutral-300/40 rounded-2xl transition-transform duration-500`}></div>
                   </div>
                   
                   {/* Content Section */}
                   <div className={`space-y-6 ${!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                     <div>
-                      <h3 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4 group-hover:text-neutral-700 transition-colors">
+                      <h3 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4 transition-colors">
                         {project.title}
                       </h3>
                     </div>
                     
-                    <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-neutral-200/50 group-hover:shadow-xl group-hover:border-neutral-300 transition-all duration-300">
+                    <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-neutral-200/50 transition-all duration-300">
                       <p className="text-neutral-700 leading-relaxed text-base">
                         {project.description}
                       </p>

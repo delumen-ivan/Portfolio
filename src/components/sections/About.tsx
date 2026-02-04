@@ -32,8 +32,8 @@ const About = () => {
             {/* Paragraph Section */}
             <div className="max-w-3xl mx-auto">
               <p className="text-neutral-700 leading-relaxed text-lg text-center mb-6">
-               I am a dedicated 3rd-year student at PUP Taguig Campus, 
-               currently taking the Diploma in Information Technology (DIT) course. 
+               Im currently a 3rd-year student at PUP Taguig Campus, 
+               pursuing a Diploma in Information Technology (DIT) course. 
                I am passionate about technology and always eager to learn new skills to succeed in my field.
               </p>
               <p className="text-neutral-700 leading-relaxed text-lg text-center">
