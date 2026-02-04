@@ -24,45 +24,49 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mx-auto bg-neutral-900 rounded-3xl p-12 shadow-2xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-display">
-              Get In Touch
-            </h2>
-            <div className="w-20 h-1 bg-white mx-auto rounded-full mb-4"></div>
-            <p className="text-neutral-400 text-lg">
-              Feel free to reach out for collaborations or just a friendly hello
-            </p>
-          </div>
-          
-          <div>
-            {/* Email Box */}
-            <div className="bg-white rounded-2xl p-6 mb-8 flex items-center justify-center gap-3 shadow-lg">
-              <svg className="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <a href="mailto:ivandelumen05@gmail.com" className="text-neutral-900 text-lg font-medium hover:text-neutral-700 transition-colors">
-                ivandelumen05@gmail.com
-              </a>
+        {/* Gray border container (bottom layer) */}
+        <div className="max-w-2xl mx-auto bg-neutral-600 rounded-3xl p-[2px] shadow-2xl">
+          {/* Black content container (top layer) */}
+          <div className="rounded-3xl p-10" style={{ backgroundColor: '#121212' }}>
+            <div className="text-center mb-10">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-display">
+                Get In Touch
+              </h2>
+              <div className="w-20 h-1 bg-white mx-auto rounded-full mb-4"></div>
+              <p className="text-neutral-400 text-lg">
+                Feel free to reach out or just a friendly hello
+              </p>
             </div>
             
-            {/* Social Links */}
-            <div className="flex justify-center gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative p-4 bg-neutral-800 text-white rounded-xl hover:bg-neutral-700 transition-all duration-300 hover:-translate-y-1"
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                  <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-neutral-700 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                    {social.name}
-                  </span>
+            <div>
+              {/* Email Box */}
+              <div className="bg-white rounded-2xl p-6 mb-8 flex items-center justify-center gap-3 shadow-lg">
+                <svg className="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <a href="mailto:ivandelumen05@gmail.com" className="text-neutral-900 text-lg font-medium hover:text-neutral-700 transition-colors">
+                  ivandelumen05@gmail.com
                 </a>
-              ))}
+              </div>
+              
+              {/* Social Links */}
+              <div className="flex justify-center gap-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-4 bg-neutral-800 text-white rounded-xl hover:bg-neutral-700 transition-all duration-300 hover:-translate-y-1"
+                    aria-label={social.name}
+                  >
+                    {social.icon}
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-neutral-700 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                      {social.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
