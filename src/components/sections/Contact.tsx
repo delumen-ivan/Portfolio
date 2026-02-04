@@ -1,188 +1,69 @@
-import { useState, FormEvent } from 'react'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    
-    // Simulate submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setFormData({ name: '', email: '', message: '' })
-    }, 1000)
-  }
-
-  const contactInfo = [
+  const socialLinks = [
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      ),
-      title: 'Email',
-      value: 'email@example.com',
-      link: 'mailto:email@example.com'
-    },
-    {
+      name: 'GitHub',
+      href: 'https://github.com/delumen-ivan',
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+          <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
         </svg>
       ),
-      title: 'GitHub',
-      value: 'github.com/username',
-      link: 'https://github.com'
     },
     {
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/ivan-delumen-53982728a/',
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
         </svg>
       ),
-      title: 'LinkedIn',
-      value: 'linkedin.com/in/username',
-      link: 'https://linkedin.com'
     },
   ]
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white to-neutral-50 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-neutral-200/30 rounded-full blur-3xl"></div>
-      
+    <section id="contact" className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4 font-display">
-            Get In Touch
-          </h2>
-          <div className="w-20 h-1 bg-neutral-900 mx-auto rounded-full"></div>
-          <p className="text-neutral-600 mt-6 max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? Feel free to reach out!
-          </p>
-        </div>
-        
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-neutral-900 mb-6">Let's talk about everything!</h3>
-              <p className="text-neutral-600 leading-relaxed mb-8">
-                Don't hesitate to reach out if you have any questions or just want to say hello. 
-                I'm always open to discussing new projects, creative ideas, or opportunities.
-              </p>
+        <div className="max-w-3xl mx-auto bg-neutral-900 rounded-3xl p-12 shadow-2xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-display">
+              Get In Touch
+            </h2>
+            <div className="w-20 h-1 bg-white mx-auto rounded-full mb-4"></div>
+            <p className="text-neutral-400 text-lg">
+              Feel free to reach out for collaborations or just a friendly hello
+            </p>
+          </div>
+          
+          <div>
+            {/* Email Box */}
+            <div className="bg-white rounded-2xl p-6 mb-8 flex items-center justify-center gap-3 shadow-lg">
+              <svg className="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <a href="mailto:ivandelumen05@gmail.com" className="text-neutral-900 text-lg font-medium hover:text-neutral-700 transition-colors">
+                ivandelumen05@gmail.com
+              </a>
             </div>
             
-            <div className="space-y-4">
-              {contactInfo.map((info, index) => (
+            {/* Social Links */}
+            <div className="flex justify-center gap-4">
+              {socialLinks.map((social) => (
                 <a
-                  key={index}
-                  href={info.link}
+                  key={social.name}
+                  href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-white rounded-xl border border-neutral-200 hover:border-neutral-400 hover:shadow-md transition-all duration-300 group"
+                  className="group relative p-4 bg-neutral-800 text-white rounded-xl hover:bg-neutral-700 transition-all duration-300 hover:-translate-y-1"
+                  aria-label={social.name}
                 >
-                  <div className="p-3 bg-neutral-100 text-neutral-700 rounded-lg group-hover:bg-neutral-200 transition-colors">
-                    {info.icon}
-                  </div>
-                  <div>
-                    <div className="text-sm text-neutral-500 font-medium">{info.title}</div>
-                    <div className="text-neutral-900 font-medium">{info.value}</div>
-                  </div>
+                  {social.icon}
+                  <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-neutral-700 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                    {social.name}
+                  </span>
                 </a>
               ))}
             </div>
-          </div>
-          
-          {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-200">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-semibold text-neutral-700 mb-2"
-                >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  required
-                  className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl focus:ring-2 focus:ring-neutral-500 focus:border-transparent outline-none transition-all placeholder:text-neutral-400"
-                  placeholder="John Doe"
-                />
-              </div>
-              
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-semibold text-neutral-700 mb-2"
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  required
-                  className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl focus:ring-2 focus:ring-neutral-500 focus:border-transparent outline-none transition-all placeholder:text-neutral-400"
-                  placeholder="john@example.com"
-                />
-              </div>
-              
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold text-neutral-700 mb-2"
-                >
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  required
-                  className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl focus:ring-2 focus:ring-neutral-500 focus:border-transparent outline-none transition-all resize-none placeholder:text-neutral-400"
-                  placeholder="Tell me about your project..."
-                />
-              </div>
-              
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full px-8 py-4 bg-neutral-900 text-white rounded-xl font-semibold shadow-lg shadow-neutral-200 hover:shadow-xl hover:shadow-neutral-300 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
-              >
-                {isSubmitting ? (
-                  <span className="flex items-center justify-center gap-2">
-                    <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                    </svg>
-                    Sending...
-                  </span>
-                ) : (
-                  'Send Message'
-                )}
-              </button>
-            </form>
           </div>
         </div>
       </div>
